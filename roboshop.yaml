@@ -1,5 +1,6 @@
 - name: "configure {{ component }} service"
   hosts: "{{ component }}"
   connection: local
+  become: yes
   roles:
   - "{{ component }}"
