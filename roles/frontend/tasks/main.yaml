@@ -2,7 +2,7 @@
   ansible.builtin.import_role:
     name: common
     tasks_from: nginx-setup.yaml
-    
+
 - name: clear default html files
   ansible.builtin.file: 
     path: /usr/share/nginx/html
@@ -30,7 +30,7 @@
     path: /etc/nginx/nginx.conf
 
 - name: copy nginx conf file
-  ansible.builtin.template:
+  ansible.builtin.file:
     src: nginx.conf
     dest: /etc/nginx/nginx.conf
 
